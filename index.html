@@ -1,1 +1,54 @@
-Hello
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FIRST PAGE</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+	<!-- <form>
+		<input type="text" id="link">
+		<input type="button" value="submit" id="add">
+	</form> -->
+	<ul id="web_list">
+		<li><a href="https://www.facebook.com/">Facebook</a></li>
+		<li><a href="https://www.youtube.com/?gl=VN">Youtube</a></li>
+		<li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
+		<li><a href="http://codeforces.com/">Codeforces</a></li>
+		<li><a href="https://www.kaggle.com/">Kaggle</a></li>
+		<li><a href="https://mail.google.com/mail/u/2/#inbox">Gmail</a></li>
+		<li><a href="https://www.topcv.vn/trang-chu">TopCV</a></li>
+		<li><a href="https://www.bugcrowd.com/">Bugcrowd</a></li>
+		<li><a href="https://github.com/">Github</a></li>
+		<li><a href="https://www.coursera.org/?authMode=login">Coursera</a></li>
+		<li><a href="https://kouhaku111.github.io/">My Website</a></li>
+	</ul>
+	<input type="text" id="url" placeholder="url">
+	<input type="text" id="website" placeholder="website">
+	<button onclick="addItem()">add item</button>
+	<!-- <button onclick="removeItem()">remove item</button> -->
+
+<script type="text/javascript">
+	function addItem(){
+	var ul = document.getElementById("web_list");
+	var url = document.getElementById("url");
+	var website = document.getElementById("website");
+	var li = document.createElement("li");
+	var a = document.createElement('a');
+	var linkText = document.createTextNode(website.value);
+	a.appendChild(linkText);
+	a.href = url.value;
+	li.appendChild(a);
+	ul.appendChild(li);	
+	}
+
+	// function removeItem(){
+	// var ul = document.getElementById("dynamic-list");
+ //  	var candidate = document.getElementById("candidate");
+ //  	var item = document.getElementById(candidate.value);
+ //  	ul.removeChild(item);
+	// }
+</script>
+
+</body>
+</html>
